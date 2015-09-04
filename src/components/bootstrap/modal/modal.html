@@ -1,0 +1,25 @@
+<quark-component>
+    <div class="modal fade" data-bind="onBind: getElement">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- ko content: 'encabezado' -->
+                    <!-- /ko -->
+                    <button type="button" class="close" data-bind="click: hide">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- ko content: 'cuerpo' -->
+                    <!-- /ko -->
+                </div>
+                <!-- ko hasContent: 'pie' -->
+                    <div class="modal-footer">
+                        <!-- ko content: 'pie' -->
+                        <!-- /ko -->
+                    </div>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</quark-component>

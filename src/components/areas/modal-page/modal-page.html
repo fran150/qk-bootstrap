@@ -1,0 +1,38 @@
+<quark-component>
+    <h2>Area de Prueba</h2>
+
+    <p>Area de prueba para componentes Modal. Inserta aqui los tags para probar
+    los componentes que estas creando para asi verificar su funcionamiento y permitir
+    que futuros usuarios sepan como utilizarlos.</p>
+
+    <button data-bind="click: mostrar1">Mostrar 1</button>
+    <button data-bind="click: mostrar2">Mostrar 2</button>
+
+    <bt-modal>
+        <!-- vm: 'modal' -->
+        <encabezado>
+            Hola
+        </encabezado>
+        <cuerpo>
+            <p>Este es el contenido</p>
+        </cuerpo>
+        <pie>
+            <button class="btn btn-default" data-bind="click: $child.hide">Cancelar</button>
+        </pie>
+    </bt-modal>
+
+
+    <bt-modal>
+        <!-- vm: 'modal2' -->
+        <encabezado>
+            <h2>Hola</h2>
+        </encabezado>
+        <cuerpo>
+            <p style="color: red">Este es el contenido</p>
+        </cuerpo>
+        <pie>
+            <button class="btn btn-default" data-bind="click: $child.hide">Cancelar</button>
+        </pie>
+    </bt-modal>
+
+</quark-component>
