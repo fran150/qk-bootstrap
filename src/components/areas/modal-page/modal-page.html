@@ -1,38 +1,38 @@
 <quark-component>
-    <h2>Area de Prueba</h2>
+  <h2>Area de Prueba</h2>
 
-    <p>Area de prueba para componentes Modal. Inserta aqui los tags para probar
+  <p>
+    Area de prueba para componentes Modal. Inserta aqui los tags para probar
     los componentes que estas creando para asi verificar su funcionamiento y permitir
-    que futuros usuarios sepan como utilizarlos.</p>
+    que futuros usuarios sepan como utilizarlos.
+  </p>
 
-    <button data-bind="click: mostrar1">Mostrar 1</button>
-    <button data-bind="click: mostrar2">Mostrar 2</button>
+  <bt-modal>
+    <!-- vm: 'modal' -->
+    <encabezado>
+      <h2>Modal</h2>
+    </encabezado>
+    <cuerpo>
+      <p>Esta es una ventana modal.</p>
+    </cuerpo>
+    <pie>
+      <button class="btn btn-default" data-bind="click: $child.close">Cancelar</button>
+    </pie>
+  </bt-modal>
 
-    <bt-modal>
-        <!-- vm: 'modal' -->
-        <encabezado>
-            Hola
-        </encabezado>
-        <cuerpo>
-            <p>Este es el contenido</p>
-        </cuerpo>
-        <pie>
-            <button class="btn btn-default" data-bind="click: $child.hide">Cancelar</button>
-        </pie>
-    </bt-modal>
+  <bt-modal params="dialog: true">
+    <!-- vm: 'dialog' -->
+    <encabezado>
+      <h2>Dialog</h2>
+    </encabezado>
+    <cuerpo>
+      <p>Esta es una ventana dialog.</p>
+    </cuerpo>
+    <pie>
+      <button class="btn btn-default" data-bind="click: $child.close">Cancelar</button>
+    </pie>
+  </bt-modal>
 
-
-    <bt-modal>
-        <!-- vm: 'modal2' -->
-        <encabezado>
-            <h2>Hola</h2>
-        </encabezado>
-        <cuerpo>
-            <p style="color: red">Este es el contenido</p>
-        </cuerpo>
-        <pie>
-            <button class="btn btn-default" data-bind="click: $child.hide">Cancelar</button>
-        </pie>
-    </bt-modal>
-
+  <button data-bind="click: show_modal">Modal</button>
+  <button data-bind="click: show_dialog">Dialog</button>
 </quark-component>

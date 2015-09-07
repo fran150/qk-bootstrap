@@ -1,31 +1,39 @@
 define(['knockout', 'quark', 'text!./modal.html'], function(ko, $$, templateMarkup) {
 
-    function Modal(params) {
-        var self = this;
+  function Modal(params) {
+    var self = this;
 
-        var element;
+    $$.parameters({
+      dialog: ko.observable(false)
+    }, params, this);
 
-        this.getElement = function(elem) {
-            element = elem;
-        }
+    this.dom;
+    this.dialog;
 
-        this.show = function() {
-            $(element).modal('show');
-        }
+    this.encabezado;
+    this.cuerpo;
+    this.pie;
 
-        this.hide = function() {
-            $(element).modal('hide');
-        }
-
-        this.toggle = function() {
-            $(element).modal('toggle')
-            alert('pepe')
-            alert('chau')
-        }
-    }
-
-    Modal.prototype.dispose = function() {
+    this.getElement = function(elem) {
+      self.dom = elem;
     };
 
-    return { viewModel: Modal, template: templateMarkup };
+    this.open = function() {
+      $(self.dom).modal({
+        backdrop: !self.dialog(),
+        keyboard: !self.dialog()
+      });
+
+      //$(self.model).modal('show');
+    };
+
+    this.close = function() {
+      $(self.dom).modal('hide');
+    };
+  }
+
+  Modal.prototype.dispose = function() {
+  };
+
+  return { viewModel: Modal, template: templateMarkup };
 });
