@@ -1,0 +1,30 @@
+<h2>Area de Prueba</h2>
+
+<p>Area de prueba para componentes Progress. Inserta aqui los tags para probar
+los componentes que estas creando para asi verificar su funcionamiento y permitir
+que futuros usuarios sepan como utilizarlos.</p>
+
+<bt-progress params="{ color: contexto, percent: avance, striped: rayas, animated: animado }"></bt-progress>
+
+<div>
+  <label>Avance: </label>
+  <input type="number" data-bind="value: avance" />
+</div>
+<br />
+<div>
+  <input type="checkbox" data-bind="checked: rayas" />
+  <label>Rayado</label>
+<div>
+<div data-bind="visible: rayas">
+  <input type="checkbox" data-bind="checked: animado" />
+  <label>Animado</label>
+</div>
+<br />
+<select data-bind="value: contexto">
+  <option value="default">Default</option>
+  <option value="primary">Primary</option>
+  <option value="success">Success</option>
+  <option value="info">Info</option>
+  <option value="warning">Warning</option>
+  <option value="danger">Danger</option>
+<select>

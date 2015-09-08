@@ -10,8 +10,8 @@ define(['knockout', 'quark', 'text!./panel-page.html'], function(ko, $$, templat
       }, this);
     }
 
-    Panel.prototype.dispose = function() { };
+    PanelPage.prototype.dispose = function() { };
 
-    return { viewModel: Panel, template: templateMarkup };
+    return { viewModel: PanelPage, template: templateMarkup };
 
 });

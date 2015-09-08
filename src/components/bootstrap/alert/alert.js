@@ -13,7 +13,7 @@ define(['knockout', 'quark', 'text!./alert.html'], function(ko, $$, templateMark
             dismissible: ko.observable(false)
         }, params, this);
 
-        this._style_ = ko.pureComputed(function() {
+        this._css_ = ko.pureComputed(function() {
             return 'alert alert-' + self.color() + (self.dismissible() ? ' alert-dismissible' : '');
         }, this);
 
