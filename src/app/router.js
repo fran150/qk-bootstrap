@@ -14,6 +14,9 @@ define(["knockout", "crossroads", "hasher"], function(ko, crossroads, hasher) {
             { url: '',          params: { page: 'home-page' } },
             { url: 'Modal', params: { page: 'modal-page' } },
 
+            { url: 'panel', params: { page: 'panel-page' } },
+
+
             // [Scaffolded areas will be inserted here. To retain this feature, don't remove this comment.]
         ]
     });
