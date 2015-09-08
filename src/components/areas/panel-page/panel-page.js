@@ -1,6 +1,6 @@
 define(['knockout', 'quark', 'text!./panel-page.html'], function(ko, $$, templateMarkup) {
 
-    function Panel(params) {
+    function PanelPage(params) {
       var self = this;
 
       this.context;

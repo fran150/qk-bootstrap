@@ -13,7 +13,7 @@ define(['knockout', 'quark', 'text!./panel.html'], function(ko, $$, templateMark
         color: ko.observable('default')
     }, params, this);
 
-    this._style = ko.pureComputed(function() {
+    this._style_ = ko.pureComputed(function() {
         return 'panel panel-' + self.color();
     }, this);
 

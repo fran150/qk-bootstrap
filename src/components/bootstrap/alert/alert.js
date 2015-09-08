@@ -3,13 +3,18 @@ define(['knockout', 'quark', 'text!./alert.html'], function(ko, $$, templateMark
     function Alert(params) {
         var self = this;
 
+        this.color;
+        this.visible;
+        this.dismissible;
+
         $$.parameters({
-            type: ko.observable('success'),
+            color: ko.observable('info'),
             visible: ko.observable(true),
+            dismissible: ko.observable(false)
         }, params, this);
 
-        this._style = ko.pureComputed(function() {
-            return 'alert alert-' + self.type();
+        this._style_ = ko.pureComputed(function() {
+            return 'alert alert-' + self.color() + (self.dismissible() ? ' alert-dismissible' : '');
         }, this);
 
         this.show = function() {

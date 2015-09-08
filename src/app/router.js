@@ -12,10 +12,9 @@ define(["knockout", "crossroads", "hasher"], function(ko, crossroads, hasher) {
     return new Router({
         routes: [
             { url: '',          params: { page: 'home-page' } },
+            { url: 'Alert', params: { page: 'alert-page' } },
             { url: 'Modal', params: { page: 'modal-page' } },
-
-            { url: 'panel', params: { page: 'panel-page' } },
-
+            { url: 'Panel', params: { page: 'panel-page' } },
 
             // [Scaffolded areas will be inserted here. To retain this feature, don't remove this comment.]
         ]

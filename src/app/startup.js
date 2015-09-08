@@ -9,6 +9,7 @@ define(['jquery', 'knockout', './router', 'bootstrap', 'knockout-projections', '
     // bower:components
     // endbower
 
+    ko.components.register('alert-page', { require: 'components/areas/alert-page/alert-page' });
     ko.components.register('modal-page', { require: 'components/areas/modal-page/modal-page' });
     ko.components.register('panel-page', { require: 'components/areas/panel-page/panel-page' });
 
