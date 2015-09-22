@@ -1,10 +1,6 @@
-define(['jquery', 'knockout', './router', 'bootstrap', 'knockout-projections', 'blockUI'], function($, ko, router) {
+define(['jquery', 'knockout', './router', 'bootstrap', 'knockout-projections', 'blockui'], function($, ko, router) {
     ko.components.register('nav-bar', { require: 'components/pages/nav-bar/nav-bar' });
     ko.components.register('home-page', { require: 'components/pages/home-page/home' });
-
-    ko.components.register('quark-component', {
-        template: { require: 'text!bower_modules/quark/dist/quark-component.html' }
-    });
 
     // bower:components
     // endbower

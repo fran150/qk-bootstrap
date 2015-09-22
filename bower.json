@@ -3,17 +3,17 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "bootstrap": "~3.3.4",
-        "crossroads": "~0.12.0",
-        "hasher": "~1.2.0",
-        "requirejs": "~2.1.11",
-        "requirejs-text": "~2.0.10",
-        "knockout": "~3.3.0",
-        "knockout-projections": "~1.1.0",
-        "knockout-mapping": "~2.4.1",
+        "bootstrap": "3.3.*",
+        "crossroads": "0.12.*",
+        "hasher": "1.2.*",
+        "requirejs": "2.1.*",
+        "requirejs-text": "2.0.*",
+        "knockout": "3.3.*",
+        "knockout-projections": "1.1.*",
+        "knockout-mapping": "2.4.*",
         "blockui": "*",
-        "accounting.js": "~0.4.1",
-        "quark": "~0.5.5"
+        "accounting.js": "0.4.*",
+        "quark": "0.7.*"
     },
     "main": [
     ],

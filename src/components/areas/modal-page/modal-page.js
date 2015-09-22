@@ -1,27 +1,21 @@
-define(['knockout', 'quark', 'text!./modal-page.html'], function(ko, $$, templateMarkup) {
-
-  function ModalPage(params) {
+define(['knockout', 'quark', 'text!./modal-page.html'], function(ko, $$, template) {
+  return $$.component(function(params, $scope) {
     var self = this;
 
-    $$.components({
-      modal: ko.observable(),
-      dialog: ko.observable()
-    }, this);
+myself = self;
+myscope = $scope;
 
-    this.ready = function() {
+    $scope.ready = function() {
 
     };
 
-    this.show_modal = function() {
-      self.modal().open();
+    $scope.show_modal = function() {
+      this.modal.open();
     };
 
-    this.show_dialog = function() {
-      self.dialog().open();
+    $scope.show_dialog = function() {
+      this.dialog.open();
     };
-  }
 
-  ModalPage.prototype.dispose = function() { };
-
-  return { viewModel: ModalPage, template: templateMarkup };
+  }, template);
 });
