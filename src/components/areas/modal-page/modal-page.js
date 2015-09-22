@@ -2,9 +2,6 @@ define(['knockout', 'quark', 'text!./modal-page.html'], function(ko, $$, templat
   return $$.component(function(params, $scope) {
     var self = this;
 
-myself = self;
-myscope = $scope;
-
     $scope.ready = function() {
 
     };
