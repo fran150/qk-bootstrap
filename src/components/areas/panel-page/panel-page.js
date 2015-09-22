@@ -1,17 +1,10 @@
-define(['knockout', 'quark', 'text!./panel-page.html'], function(ko, $$, templateMarkup) {
+define(['knockout', 'quark', 'text!./panel-page.html'], function(ko, $$, template) {
+  return $$.component(function(params, $scope) {
+    var self = this;
 
-    function PanelPage(params) {
-      var self = this;
+    $$.parameters({
+      context: ko.observable()
+    }, params, [this, $scope]);
 
-      this.context;
-
-      $$.components({
-        context: ko.observable()
-      }, this);
-    }
-
-    PanelPage.prototype.dispose = function() { };
-
-    return { viewModel: PanelPage, template: templateMarkup };
-
+  }, template);
 });
