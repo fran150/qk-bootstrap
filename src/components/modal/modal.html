@@ -1,0 +1,27 @@
+<quark-component>
+    <div class="modal fade" data-bind="onBind: getElement">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <!-- ko hasContent: 'modal-heading' -->
+                    <div class="modal-header">
+                        <!-- ko content: 'modal-heading' -->
+                        <!-- /ko -->
+                        <button type="button" class="close" data-bind="click: hide">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <!-- /ko -->
+                <div class="modal-body">
+                    <!-- ko content: 'modal-body' -->
+                    <!-- /ko -->
+                </div>
+                <!-- ko hasContent: 'modal-footer' -->
+                    <div class="modal-footer">
+                        <!-- ko content: 'pie' -->
+                        <!-- /ko -->
+                    </div>
+                <!-- /ko -->
+            </div>
+        </div>
+    </div>
+</quark-component>

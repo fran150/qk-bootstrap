@@ -1,0 +1,15 @@
+<quark-component>
+    <ul class="nav nav-tabs" data-bind="onBind: init">
+        <!-- ko foreach: model.tabs -->
+            <li role="presentation" data-bind="css: { active: id == $parent.model.selectedId() }">
+                <a href="#" data-bind="text: name, click: $parent.model.select"></a>
+            </li>
+        <!-- /ko -->
+    </ul>
+    <!-- ko foreach: model.tabs -->
+        <div data-bind="visible: id == $parent.model.selectedId()">
+            <!-- ko content: 'tab[data-id="' + id + '"]' -->
+            <!-- /ko -->
+        </div>
+    <!-- /ko -->
+</quark-component>
