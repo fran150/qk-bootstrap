@@ -1,0 +1,25 @@
+<quark-component>
+  <h2>Area de Prueba</h2>
+
+  <p>Area de prueba para componentes Panel. Inserta aqui los tags para probar
+  los componentes que estas creando para asi verificar su funcionamiento y permitir
+  que futuros usuarios sepan como utilizarlos.</p>
+
+  <bt-panel params="{ color: context, expansible: true }">
+    <encabezado>
+      <h2>Titulo</h2>
+    </encabezado>
+    <cuerpo>
+      <p>Cuerpo del panel.</p>
+    </cuerpo>
+  </bt-panel>
+
+  <select data-bind="value: context">
+    <option value="default">Default</option>
+    <option value="primary">Primary</option>
+    <option value="success">Success</option>
+    <option value="info">Info</option>
+    <option value="warning">Warning</option>
+    <option value="danger">Danger</option>
+  <select>
+</quark-component>

@@ -1,34 +1,27 @@
-define(['knockout', 'quark', 'text!./alert.html'], function(ko, $$, templateMarkup) {
+define(['knockout', 'quark', 'text!./alert.html'], function(ko, $$, template) {
+  return $$.component(function(params, $scope) {
+    var self = this;
 
-    function Alert(params) {
-        var self = this;
+    $$.parameters({
+        color: ko.observable('info'),
+        visible: ko.observable(true),
+        dismissible: false
+    }, params, [this, $scope]);
 
-        $$.parameters({
-            type: ko.observable('success'),
-            visible: ko.observable(true),
-        }, params, this);
+    $scope._css_ = ko.pureComputed(function() {
+        return 'alert alert-' + self.color() + (self.dismissible ? ' alert-dismissible' : '');
+    }, this);
 
-        this._style = ko.pureComputed(function() {
-            return 'alert alert-' + self.type();
-        }, this);
-
-        this.show = function() {
-            self.visible(true);
-        }
-
-        this.hide = function() {
-            self.visible(false);
-        }
-
-        this.toggle = function() {
-            self.visible(!self.visible());
-        }
+    $scope.show = function() {
+        self.visible(true);
     }
 
-  // Esto corre cuando el componente se destruye. Pon aqui cualquier logica necesaria
-  // para limpiar. Por ejemplo cancelar setTimeouts o llamar a dispose de cualquier
-  Alert.prototype.dispose = function() { };
+    $scope.hide = function() {
+        self.visible(false);
+    }
 
-  return { viewModel: Alert, template: templateMarkup };
-
+    $scope.toggle = function() {
+        self.visible(!self.visible());
+    }
+  }, template);
 });

@@ -13,10 +13,10 @@ var require = {
         "text":                 "bower_modules/requirejs-text/text",
 
         "accounting-js":        "bower_modules/accounting.js/accounting",
-        "blockUI":              "bower_modules/blockui/jquery.blockUI",
+        "blockui":              "bower_modules/blockui/jquery.blockUI",
         "knockout-mapping":     "bower_modules/knockout-mapping/knockout.mapping",
 
-        "quark":                "bower_modules/quark/dist/quark-debug"
+        "quark":                "bower_modules/quark/dist/quark"
         // endbower
     },
     shim: {
