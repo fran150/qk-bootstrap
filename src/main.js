@@ -1,6 +1,5 @@
 define(['module', 'knockout', 'jquery', 'quark'], function(mod, ko, $, $$) {
-    debugger;
-    $$.module(mod, {
+    return $$.module(mod, {
         prefix: 'bt',
         components: {
             "alert": "components/alert/alert",
@@ -12,7 +11,6 @@ define(['module', 'knockout', 'jquery', 'quark'], function(mod, ko, $, $$) {
             "navbar-link": "components/navbar/controls/link",
             "tabs": "components/tabs/tabs"
         }
-    }, function(moduleName) {
     });
 });
 
