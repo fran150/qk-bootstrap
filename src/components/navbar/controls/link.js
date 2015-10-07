@@ -4,14 +4,18 @@ define(['knockout', 'quark', 'text!./link.html'], function(ko, $$, template) {
 
         $$.parameters({
             routeName: ko.observable(),
+            url: ko.observable(),
+            text: ko.observable('Link')
         }, params, this);
 
-        $$.parameters({
-            text: ko.observable('Link')
-        }, params, [this, $scope]);
-
         $scope.url = ko.pureComputed(function() {
-            return $$.routing.link(self.routeName());
+            if (self.routeName()) {
+                return $$.routing.link(self.routeName());
+            } else if (self.url()) {
+                return self.url();
+            }
+
+            return '#';
         }, $scope);
 
         $scope.isActive = ko.pureComputed(function() {
