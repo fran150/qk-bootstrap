@@ -7,9 +7,11 @@
         <!-- /ko -->
     </ul>
     <!-- ko foreach: model.tabs -->
-        <div data-bind="visible: id == $parent.model.selectedId()">
-            <!-- ko content: 'tab[data-id="' + id + '"]' -->
-            <!-- /ko -->
+        <div data-bind="upContext: $parent">
+            <div data-bind="visible: $child.id == model.selectedId()">
+                <!-- ko content: 'tab[data-id="' + $child.id + '"]' -->
+                <!-- /ko -->
+            </div>
         </div>
     <!-- /ko -->
 </quark-component>
