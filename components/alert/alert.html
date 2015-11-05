@@ -1,8 +1,10 @@
 <quark-component>
-    <div data-bind="css: _style, visible: visible">
-        <button type="button" class="close" data-bind="click: hide">
-            <span aria-hidden="true">&times;</span>
-        </button>
+    <div data-bind="css: style, visible: model.visible">
+        <!-- ko if: model.hideable -->
+            <button type="button" class="close" data-bind="click: model.hide">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        <!-- /ko -->
         <!-- ko content --><!-- /ko -->
     </div>
 </quark-component>

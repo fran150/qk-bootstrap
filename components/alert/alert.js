@@ -6,21 +6,22 @@ define(['knockout', 'quark', 'text!./alert.html'], function(ko, $$, template) {
         $$.parameters({
             type: ko.observable('danger'),
             visible: ko.observable(true),
-        }, params, [this, $scope]);
+            hideable: ko.observable(false)
+        }, params, this);
 
-        $scope._style = ko.pureComputed(function() {
+        $scope.style = ko.pureComputed(function() {
             return 'alert alert-' + self.type();
         }, this);
 
-        $scope.show = function() {
+        this.show = function() {
             self.visible(true);
         }
 
-        $scope.hide = function() {
+        this.hide = function() {
             self.visible(false);
         }
 
-        $scope.toggle = function() {
+        this.toggle = function() {
             self.visible(!self.visible());
         }
     }, template);
