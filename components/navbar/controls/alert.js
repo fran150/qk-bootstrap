@@ -5,20 +5,7 @@ define(['knockout', 'quark', 'text!./alert.html'], function(ko, $$, template) {
         $$.parameters({
             icon: ko.observable('glyphicon glyphicon-bell'),
             text: ko.observable('Alerts'),
-            alerts: ko.observableArray([
-                {
-                    icon: '',
-                    routeName: '',
-                    routeOptions: '',
-                    text: 'Alert 1'
-                },
-                {
-                    icon: '',
-                    routeName: '',
-                    routeOptions: '',
-                    text: 'Alert 2'
-                }
-            ])
+            alerts: ko.observableArray([])
         }, params, [this, $scope]);
 
         $scope.url = function(routeName, routeOptions) {

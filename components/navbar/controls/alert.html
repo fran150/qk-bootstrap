@@ -6,21 +6,30 @@
                     <span data-bind="css: icon"></span>
                 <!-- /ko -->
                 <span data-bind="text: text"></span>
-                <!-- ko if: alerts().length -->
-                    <div class="badge" data-bind="text: alerts().length"></div>
-                <!-- /ko -->
                 <span class="caret"></span>
+
             </a>
-            <ul class="dropdown-menu" data-bind="foreach: alerts">
-                <li>
-                    <a data-bind="attr: { href: $parent.url(routeName, routeOptions) }">
-                        <!-- ko if: icon -->
-                            <span data-bind="css: icon"></span>
-                        <!-- /ko -->
-                        <span data-bind="html: text"></span>
-                    </a>
-                </li>
-            </ul>
+            <!-- ko if: model.alerts().length == 0 -->
+               <ul class="dropdown-menu">
+                    <li>
+                        &nbsp; &nbsp;<span class="text-success fa fa-check-circle"></span> &nbsp;
+                        <span class="text-success">No posee alertas</span>
+                    </li>
+                </ul>
+            <!-- /ko -->
+            <!-- ko if: model.alerts().length > 0  -->
+                <ul class="dropdown-menu" data-bind="foreach: alerts">
+                    <li>
+                        <a data-bind="attr: { href: $parent.url(routeName, routeOptions) }">
+                            <!-- ko if: icon -->
+                                <span data-bind="css: icon"></span>
+                            <!-- /ko -->
+                            <span class="text-success fa fa-check-circle"></span> &nbsp;
+                            <span class="text-success" data-bind="html: text"></span>
+                        </a>
+                    </li>
+                </ul>
+           <!-- /ko -->
         </li>
     </div>
 </quark-component>
