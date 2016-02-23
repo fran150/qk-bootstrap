@@ -46,6 +46,7 @@ define(['knockout', 'quark', 'text!./modal.html'], function(ko, $$, template) {
             // el backdrop y el propio modal.
             $('.modal-backdrop').remove();
             $(element).remove();
+            $('body').removeClass('modal-open');
         }
 
     }, template);
