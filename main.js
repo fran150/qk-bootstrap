@@ -1,6 +1,9 @@
 define(['module', 'knockout', 'jquery', 'quark'], function(mod, ko, $, $$) {
     return $$.module(mod, {
         prefix: 'bt',
+        css: [
+            "css/styles.css"
+        ],
         components: {
             "alert": "components/alert/alert",
             "modal": "components/modal/modal",

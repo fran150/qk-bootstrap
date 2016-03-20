@@ -8,10 +8,20 @@ define(['knockout', 'quark', 'text!./modal.html'], function(ko, $$, template) {
             lg: 'modal-lg'
         }
 
+        var styles = {
+            default: '',
+            primary: 'modal-header-primary',
+            info: 'modal-header-info',
+            success: 'modal-header-success',
+            warning: 'modal-header-warning',
+            danger: 'modal-header-danger'
+        }
+
         var element;
 
         $$.parameters({
-            size: ko.observable('md')
+            size: ko.observable('md'),
+            style: ko.observable('default')
         }, params, this);
 
         $scope.sizeStyle = ko.pureComputed(function() {
@@ -19,6 +29,14 @@ define(['knockout', 'quark', 'text!./modal.html'], function(ko, $$, template) {
                 return sizes[self.size()];
             } else {
                 return sizes['md'];
+            }
+        });
+
+        $scope.headingStyle = ko.pureComputed(function() {
+            if (styles[self.style()]) {
+                return styles[self.style()];
+            } else {
+                return styles['default'];
             }
         });
 
