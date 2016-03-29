@@ -1,0 +1,24 @@
+{
+  "name": "Quark-Bootstrap",
+  "version": "0.1.0",
+  "authors": [
+    "admin <fllopez@bpba.com.ar>"
+  ],
+  "description": "Objetos de Bootstrap implementados para quark.js",
+  "main": "main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "quark-bootstrap"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
