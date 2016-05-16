@@ -8,7 +8,8 @@ define(['knockout', 'quark', 'text!./button.html'], function(ko, $$, template) {
 
         $$.parameters({
             text: ko.observable(''),
-            icon: ko.observable('')
+            icon: ko.observable(''),
+            visible: ko.observable(true)
         }, params, [this, $scope]);
 
         $scope.click = function() {
