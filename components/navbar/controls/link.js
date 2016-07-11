@@ -10,7 +10,7 @@ define(['knockout', 'quark', 'text!./link.html'], function(ko, $$, template) {
 
         $scope.url = ko.pureComputed(function() {
             if (self.routeName()) {
-                return $$.routing.link(self.routeName());
+                return '#' + $$.routing.hash(self.routeName());
             } else if (self.url()) {
                 return self.url();
             }
@@ -21,7 +21,7 @@ define(['knockout', 'quark', 'text!./link.html'], function(ko, $$, template) {
         $scope.isActive = ko.pureComputed(function() {
             var current = $$.routing.current();
 
-            if (current.route.fullName == self.routeName()) {
+            if (current.config.fullName == self.routeName()) {
                 return true;
             }
 

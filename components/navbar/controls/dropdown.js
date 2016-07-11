@@ -28,7 +28,7 @@ define(['knockout', 'quark', 'text!./dropdown.html'], function(ko, $$, template)
         }
 
         $scope.isMainActive = ko.pureComputed(function() {
-            var current = $$.routing.current().route.fullName;
+            var current = $$.routing.current().config.fullName;
 
             for (var i = 0; i < self.options().length; i++) {
                 var item = self.options()[i];
@@ -47,7 +47,7 @@ define(['knockout', 'quark', 'text!./dropdown.html'], function(ko, $$, template)
         };
 
         $scope.isActive = function(routeName) {
-            var current = $$.routing.current().route.fullName;
+            var current = $$.routing.current().config.fullName;
 
             if (current == routeName) {
                 return true;
