@@ -10,8 +10,10 @@
     "amd"
   ],
   "keywords": [
-    "Quark",
-    "Bootstrap"
+      "bootstrap",
+      "quark",
+      "module",
+      "components"
   ],
   "license": "MIT",
   "ignore": [
