@@ -1,12 +1,14 @@
 <quark-component>
-    <div class="modal fade" data-bind="onBind: getElement">
-        <div class="modal-dialog" data-bind="css: sizeStyle">
+    <div class="modal fade" data-bind="onBind: getElement, css: modalClass">
+        <div class="modal-dialog" data-bind="css: modalDialogClass">
             <div class="modal-content">
                 <!-- ko hasContent: 'modal-heading' -->
-                    <div class="modal-header" data-bind="css: headingStyle">
-                        <button type="button" class="close" data-bind="click: model.hide">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+                    <div class="modal-header modal-primary">
+                        <!-- ko if: model.showCloseButton -->
+                            <button type="button" class="close" data-bind="click: model.hide">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        <!-- /ko -->
                         <!-- ko content: 'modal-heading' -->
                         <!-- /ko -->
                     </div>

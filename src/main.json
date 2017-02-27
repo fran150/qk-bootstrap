@@ -1,0 +1,17 @@
+{
+    "css": [],
+    "namespaces": {
+        "alert": "components/alert.component",
+        "box": "components/box.component",
+        "datepicker": "components/datepicker.component",
+        "daterangepicker": "components/daterangepicker.component",
+        "infobox": {
+            "": "components/infobox.component",
+            "progress": "components/infobox/progress.component"
+        },
+        "modal": "components/modal.component",
+        "switch": "components/switch.component"
+    },
+    "prefix": "bt",
+    "version": "0.1.0"
+}
