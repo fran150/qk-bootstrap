@@ -1,0 +1,24 @@
+{
+    "name": "qk-bootstrap",
+    "uglify": true,
+    "externals": [
+        "adminLTE",
+        "adminLTE-plugins",
+        "bootstrap-switch/js",
+        "bootstrap-switch/bt3/css",
+        "bootstrap/js",
+        "bootstrap/css",
+        "moment"
+    ],
+    "include": [
+        "components/alert.component",
+        "components/box.component",
+        "components/datepicker.component",
+        "components/daterangepicker.component",
+        "components/infobox.component",
+        "components/infobox/progress.component",
+        "components/modal.component",
+        "components/switch.component"
+    ],
+    "bundles": {}
+}
