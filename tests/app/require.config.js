@@ -7,11 +7,11 @@ require = requireConfigure(QuarkRequireConf('bower_modules', true), {
         'json': 'bower_modules/requirejs-plugins/src/json',
         'bootstrap/js': 'bower_modules/bootstrap/dist/js/bootstrap.min',
         'bootstrap/css': 'bower_modules/bootstrap/dist/css/bootstrap.min',
-        'bootstrap-switch/js': 'bower_modules/bootstrap-switch/dist/js/bootstrap-switch.min',
-        'bootstrap-switch/bt3/css': 'bower_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min',
+        'bt-switch': 'bower_modules/bootstrap-switch/dist',
         'adminLTE': 'bower_modules/AdminLTE/dist',
         'adminLTE-plugins': 'bower_modules/AdminLTE/plugins',
         'moment': 'bower_modules/AdminLTE/plugins/daterangepicker/moment.min',
+        'select2': 'bower_modules/select2/dist',
         'qk-bootstrap': './src'
     },
     shim: {
@@ -21,7 +21,7 @@ require = requireConfigure(QuarkRequireConf('bower_modules', true), {
         "adminLTE": {
             "deps": ['bootstrap/js']
         },
-        "bootstrap-switch/js": {
+        "bt-switch": {
             "deps": ['bootstrap/js']
         },
         "adminLTE-plugins/datepicker/locales/bootstrap-datepicker.es": {
@@ -29,6 +29,9 @@ require = requireConfigure(QuarkRequireConf('bower_modules', true), {
                 'adminLTE-plugins/datepicker/bootstrap-datepicker'
             ]
         },
+        "loadCss!adminLTE/css/AdminLTE.min": {
+            "deps": ['loadCss!select2/css/select2.min']
+        }
     }
 });
 

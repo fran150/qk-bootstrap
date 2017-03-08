@@ -4,11 +4,11 @@
     "externals": [
         "adminLTE",
         "adminLTE-plugins",
-        "bootstrap-switch/js",
-        "bootstrap-switch/bt3/css",
+        "bt-switch",
         "bootstrap/js",
         "bootstrap/css",
-        "moment"
+        "moment",
+        "select2"
     ],
     "include": [
         "components/alert.component",
@@ -18,6 +18,8 @@
         "components/infobox.component",
         "components/infobox/progress.component",
         "components/modal.component",
+        "components/popover.component",
+        "components/select2.component",
         "components/switch.component"
     ],
     "bundles": {}

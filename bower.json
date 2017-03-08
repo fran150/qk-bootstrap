@@ -10,10 +10,10 @@
     "amd"
   ],
   "keywords": [
-      "bootstrap",
-      "quark",
-      "module",
-      "components"
+    "bootstrap",
+    "quark",
+    "module",
+    "components"
   ],
   "license": "MIT",
   "ignore": [
@@ -25,7 +25,8 @@
     "requirejs-plugins": "^1.0.3",
     "AdminLTE": "admin-lte#^2.3.11",
     "bootstrap-switch": "~3.3.2",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "select2": "^4.0.3"
   },
   "devDependencies": {
     "jasmine-core": "jasmine#^2.5.2"

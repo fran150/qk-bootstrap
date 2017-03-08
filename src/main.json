@@ -10,6 +10,8 @@
             "progress": "components/infobox/progress.component"
         },
         "modal": "components/modal.component",
+        "popover": "components/popover.component",
+        "select2": "components/select2.component",
         "switch": "components/switch.component"
     },
     "prefix": "bt",

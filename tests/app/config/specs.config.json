@@ -6,5 +6,7 @@
     "infobox-progress.test",
     "infobox.test",
     "modal.test",
+    "popover.test",
+    "select2.test",
     "switch.test"
 ]

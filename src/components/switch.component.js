@@ -2,8 +2,8 @@ define([
     'quark',
     'knockout',
     'text!./switch.component.html',
-    'loadCss!bootstrap-switch/bt3/css',
-    'bootstrap-switch/js'
+    'loadCss!bt-switch/css/bootstrap3/bootstrap-switch.min',
+    'bt-switch/js/bootstrap-switch.min'
 ], function($$, ko, template) {
 
     function SwitchComponent(params, $scope, $imports) {
@@ -17,7 +17,8 @@ define([
             onText: ko.observable('Si'),
             offColor: ko.observable(),
             offText: ko.observable('No'),
-            disabled: ko.observable(false)
+            disabled: ko.observable(false),
+            action: function() { }
         }, params, this);
 
         // Get element
@@ -33,6 +34,7 @@ define([
                 offColor: self.offColor(),
                 onSwitchChange: function(event, state) {
                     self.value(state);
+                    $$.call(self.action, state);
                 }
             };
 
