@@ -3,8 +3,8 @@ define([
     'knockout',
     'jquery',
     'text!./select2.component.html',
-    'select2/js/select2.min',
-    'loadCss!select2/css/select2.min'
+    '$select2/js/select2.min',
+    'loadCss!$select2/css/select2.min'
 ], function($$, ko, $, template) {
 
     function Select2Component(params, $scope, $imports) {

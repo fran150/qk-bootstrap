@@ -3,9 +3,9 @@ define([
     'knockout',
     'jquery',
     'text!./datepicker.component.html',
-    'adminLTE-plugins/datepicker/bootstrap-datepicker',
-    'loadCss!adminLTE-plugins/datepicker/datepicker3.css',
-    'adminLTE-plugins/datepicker/locales/bootstrap-datepicker.es'
+    '$bootstrap-datepicker/js/bootstrap-datepicker',
+    'loadCss!$bootstrap-datepicker/css/bootstrap-datepicker3.css',
+    '$bootstrap-datepicker/locales/bootstrap-datepicker.es.min'
 ], function($$, ko, $, template) {
 
     function DatepickerComponent(params, $scope, $imports) {
@@ -27,8 +27,10 @@ define([
                 var obs = self.value();
                 var val = $(element).datepicker('getDate');
 
-                if (obs.getTime() != val.getTime()) {
-                    self.value(val);
+                if (obs) {
+                    if (obs.getTime() != val.getTime()) {
+                        self.value(val);
+                    }
                 }
             });
 

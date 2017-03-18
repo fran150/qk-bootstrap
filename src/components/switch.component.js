@@ -2,8 +2,8 @@ define([
     'quark',
     'knockout',
     'text!./switch.component.html',
-    'loadCss!bt-switch/css/bootstrap3/bootstrap-switch.min',
-    'bt-switch/js/bootstrap-switch.min'
+    'loadCss!$bootstrap-switch/css/bootstrap3/bootstrap-switch.min',
+    '$bootstrap-switch/js/bootstrap-switch.min'
 ], function($$, ko, template) {
 
     function SwitchComponent(params, $scope, $imports) {
