@@ -4,8 +4,8 @@ define([
     'jquery',
     '../lib/daterangepicker-es',
     'text!./daterangepicker.component.html',
-    'loadCss!$bootstrap-daterangepicker/daterangepicker.css',
-    '$bootstrap-daterangepicker/daterangepicker'
+    'loadCss!adminLTE/daterangepicker/css',
+    'adminLTE/daterangepicker/js'
 ], function($$, ko, $, locale, template) {
 
     function DaterangepickerComponent(params, $scope, $imports) {

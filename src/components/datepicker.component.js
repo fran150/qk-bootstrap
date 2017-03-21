@@ -3,9 +3,9 @@ define([
     'knockout',
     'jquery',
     'text!./datepicker.component.html',
-    '$bootstrap-datepicker/js/bootstrap-datepicker',
-    'loadCss!$bootstrap-datepicker/css/bootstrap-datepicker3.css',
-    '$bootstrap-datepicker/locales/bootstrap-datepicker.es.min'
+    'adminLTE/datepicker/js',
+    'loadCss!adminLTE/datepicker/css',
+    'adminLTE/datepicker/locales/es'
 ], function($$, ko, $, template) {
 
     function DatepickerComponent(params, $scope, $imports) {

@@ -6,8 +6,8 @@ define([
     'json!./main.json',
     'bootstrap/js',
     'loadCss!bootstrap/css',
-    '$AdminLTE/js/app.min',
-    'loadCss!$AdminLTE/css/AdminLTE.min'
+    'adminLTE/js',
+    'loadCss!adminLTE/css'
 ], function(mod, ko, $, $$, config) {
 
     return $$.module(mod, config);
