@@ -36,7 +36,7 @@ define([
         }
 
         $scope.dispose = function() {
-            $(element).popover('detroy');
+            $(element).popover('destroy');
         }
     }
 
