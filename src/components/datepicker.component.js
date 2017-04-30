@@ -1,3 +1,7 @@
+/**
+    @component <a href="http://bootstrap-datepicker.readthedocs.io/en/latest/">Bootstrap's datepicker</a>
+    component. Shows the user a calendar allowing to select a date.
+*/
 define([
     'quark',
     'knockout',
@@ -14,6 +18,9 @@ define([
         var element;
 
         $$.parameters({
+            /**
+                @parameter date Selected date
+            */
             value: ko.observable()
         }, params, this);
 
@@ -43,7 +50,7 @@ define([
             })
         }
 
-        this.dispose = function() {
+        $scope.dispose = function() {
             subscriptions.value.dispose();
             $(element).datepicker('destroy');
         }

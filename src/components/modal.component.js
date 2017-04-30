@@ -1,3 +1,6 @@
+/**
+    @component Shows a bootstrap modal popup
+*/
 define([
     'quark',
     'knockout',
@@ -30,14 +33,50 @@ define([
 
         // Allowed parameters
         $$.parameters({
+            /**
+                @parameter string Modal size. (sm, md, lg)
+                @observable @exposed
+            */
             size: ko.observable('md'),
+            /**
+                @parameter string Bootstrap's style to use in the modal.
+                @observable @exposed
+            */
             style: ko.observable('default'),
+            /**
+                @parameter bool Show a backdrop along with the modal window.
+                @observable @exposed
+            */
             backdrop: ko.observable(true),
+            /**
+                @parameter bool Allow the use of the ESC key to close the modal.
+                @observable @exposed
+            */
             keyboard: ko.observable(true),
+            /**
+                @parameter bool Show the close button, allowing the user to manually close the window.
+                @observable @exposed
+            */
             showCloseButton: ko.observable(true),
+            /**
+                @parameter callback Called when the modal is being shown (animation running)
+                @observable @exposed
+            */
             onShow: function(e) {},
+            /**
+                @parameter callback Called when the modal is finished opening (animation ready)
+                @observable @exposed
+            */
             onShown: function(e) {},
+            /**
+                @parameter callback Called when the modal is being hid (animation running)
+                @observable @exposed
+            */
             onHide: function(e) {},
+            /**
+                @parameter callback Called when the modal is finished hiding (animation ready)
+                @observable @exposed
+            */
             onHidden: function(e) {}
         }, params, this);
 
@@ -91,19 +130,25 @@ define([
             $$.call(self.onHidden, e);
         });
 
-        // Shows the modal
+        /**
+            @method Shows the modal
+        */
         this.show = function() {
             $(element).modal('show');
         }
 
-        // Hides the modal
+        /**
+            @method Hides the modal
+        */
         this.hide = function() {
             $(element).modal('hide');
         }
 
-        // Toggle modal visible / not visible
+        /**
+            @method Toggle modal visible not visible
+        */
         this.toggle = function() {
-            $(element).modal('toggle')
+            $(element).modal('toggle');
         }
 
         // On init set the modal's options
@@ -118,7 +163,7 @@ define([
         }
 
         // On dispose
-        this.dispose = function() {
+        $scope.dispose = function() {
             // When component is disposed hide the modal
             self.hide();
 

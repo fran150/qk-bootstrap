@@ -1,3 +1,7 @@
+/**
+    @component <a href="http://bootstrap-datepicker.readthedocs.io/en/latest/">Bootstrap's DateRangePicker</a>
+    component. Allows the user to select a range of dates.
+*/
 define([
     'quark',
     'knockout',
@@ -14,7 +18,15 @@ define([
         var element;
 
         $$.parameters({
+            /**
+                @parameter date Start date of the selected period
+                @observable @exposed
+            */
             startDate: ko.observable(),
+            /**
+                @parameter date End date of the selected period
+                @observable @exposed
+            */
             endDate: ko.observable()
         }, params, this);
 

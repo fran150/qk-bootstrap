@@ -1,3 +1,6 @@
+/**
+    @component Shows a <a href="https://select2.github.io/"> Bootstrap select2 element</a>
+*/
 define([
     'quark',
     'knockout',
@@ -14,30 +17,108 @@ define([
         var options = {};
 
         $$.parameters({
+            /**
+                @parameter string Placeholder text to show
+            */
             placeholder: '',
+            /**
+                @parameter bool Allow multiple item selection
+            */
             multiple: false,
+            /**
+                @parameter int Maximun number of allowed selected items.
+            */
             maximumSelectionLength: undefined,
+            /**
+                @parameter int Minimun item number for the control to show a search textbox
+            */
             minimumResultsForSearch: 2,
+            /**
+                @parameter bool Selected the highlighted item on select close
+            */
             selectOnClose: false,
+            /**
+                @parameter bool Close selector on item select
+            */
             closeOnSelect: true,
+            /**
+                @parameter bool Use the tag mode. When in tag mode the user can select from pre-existing
+                options or create a new tag by writing the value directly on the control
+            */
             tags: false,
+            /**
+                @parameter array When in tag mode use this characters as token separators
+            */
             tokenSeparators: undefined,
+            /**
+                @parameter object Allows to specify the dropdown parent when in a modal
+            */
             dropdownParent: undefined
         }, params, options);
 
         $$.parameters({
+            /**
+                @parameter bool True if the component must be disabled
+                @observable @exposed
+            */
             disabled: ko.observable(),
+            /**
+                @parameter string Selected value or array of selected values
+                @observable @exposed
+            */
             value: ko.observable(),
+            /**
+                @parameter array Array of objects to show on the component
+                @observable @exposed
+            */
             options: ko.observableArray(),
+            /**
+                @parameter string Name of the object property to show as text. It can be a function
+                that receives the item and returns the text to show.
+                @observable @exposed
+            */
             optionsText: ko.observable(),
+            /**
+                @parameter string Name of the object property to set as selected value. It can be a function
+                that receives the item and returns the selected value.
+                @observable @exposed
+            */
             optionsValue: ko.observable(),
+            /**
+                @parameter callback Called when the select finished opening
+            */
             onOpen: function() { },
+            /**
+                @parameter callback Called when the select is opening. It can return false to cancel
+                opening of the element.
+            */
             onOpening: function() { return true; },
+            /**
+                @parameter callback Called when the select finished closing
+            */
             onClose: function() { },
+            /**
+                @parameter callback Called when the select is closing. It can return false to cancel
+                closing of the element.
+            */
             onClosing: function() { return true; },
+            /**
+                @parameter callback Called when the user selects an item
+            */
             onSelect: function() { },
+            /**
+                @parameter callback Called when the user unselects an item
+            */
             onUnselect: function() { },
+            /**
+                @parameter callback Called when the user is selecting an item. It can return false to cancel
+                the event.
+            */
             onSelecting: function() {  return true; },
+            /**
+                @parameter callback Called when the user is unselecting an item. It can return false to cancel
+                the event.
+            */
             onUnselecting: function() { return true; }
         }, params, this);
 

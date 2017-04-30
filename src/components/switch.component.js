@@ -1,3 +1,6 @@
+/**
+    @component Shows a <a href="http://bootstrapswitch.com/">Bootstrap's Switch</a> component
+*/
 define([
     'quark',
     'knockout',
@@ -11,13 +14,45 @@ define([
 
         // Set component parameters
         $$.parameters({
+            /**
+                @parameter bool True if the switch is on
+                @observable @exposed
+            */
             value: ko.observable(false),
+            /**
+                @parameter string Size of the switch (mini, small, normal, large)
+                @observable @exposed
+            */
             size: ko.observable('mini'),
+            /**
+                @parameter string Color of the switch when its on
+                @observable @exposed
+            */
             onColor: ko.observable(),
+            /**
+                @parameter string Text of the switch when its on
+                @observable @exposed
+            */
             onText: ko.observable('Si'),
+            /**
+                @parameter string Color of the switch when its off
+                @observable @exposed
+            */
             offColor: ko.observable(),
+            /**
+                @parameter string Text of the switch when its off
+                @observable @exposed
+            */
             offText: ko.observable('No'),
+            /**
+                @parameter bool True if the control must be disabled
+                @observable @exposed
+            */
             disabled: ko.observable(false),
+            /**
+                @parameter callback Called when the state of the switch changes
+                @observable @exposed
+            */
             action: function() { }
         }, params, this);
 
