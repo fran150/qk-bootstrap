@@ -1,6 +1,7 @@
 /**
     @component Shows an <a href="https://almsaeedstudio.com/themes/AdminLTE/pages/widgets.html">AdminLTE box</a>
     around the content.
+    @allowContent
 */
 define([
     'quark',
@@ -68,18 +69,21 @@ define([
         }
         /**
             @method Show the box if hidden
+            @signature show()
         */
         this.show = function() {
             $(element).show();
         }
         /**
             @method Hide the box
+            @signature hide()
         */
         this.hide = function() {
             $(element).hide();
         }
         /**
             @method Check if the component is expanded
+            @signature isExpanded()
             @returns true if the component is expanded, false if its collapsed
         */
         this.isExpanded = function() {

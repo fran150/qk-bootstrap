@@ -1,5 +1,6 @@
 /**
     @component Shows a bootstrap modal popup
+    @allowContent
 */
 define([
     'quark',
@@ -132,6 +133,7 @@ define([
 
         /**
             @method Shows the modal
+            @signature show()
         */
         this.show = function() {
             $(element).modal('show');
@@ -139,6 +141,7 @@ define([
 
         /**
             @method Hides the modal
+            @signature hide()
         */
         this.hide = function() {
             $(element).modal('hide');
@@ -146,6 +149,7 @@ define([
 
         /**
             @method Toggle modal visible not visible
+            @signature toggle()
         */
         this.toggle = function() {
             $(element).modal('toggle');

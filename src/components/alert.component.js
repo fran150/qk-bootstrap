@@ -1,5 +1,6 @@
 /**
     @component Shows a Bootstrap alert component.
+    @allowContent
 */
 define([
     'quark',
@@ -48,6 +49,7 @@ define([
 
         /**
             @method Shows the alert component
+            @signature show()
         */
         this.show = function() {
             self.visible(true);
@@ -55,6 +57,7 @@ define([
 
         /**
             @method Hides the alert component
+            @signature hide()
         */
         this.hide = function() {
             self.visible(false);
@@ -62,6 +65,7 @@ define([
 
         /**
             @method Toggles the visible state of the component.
+            @signature toggle()
         */
         this.toggle = function() {
             self.visible(!self.visible());

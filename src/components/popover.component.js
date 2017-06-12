@@ -1,5 +1,6 @@
 /**
     @component Shows a popover when the user performs an action on the component's content.
+    @allowContent
 */
 define([
     'quark',
