@@ -19,6 +19,7 @@
         "components/infobox/progress.component",
         "components/modal.component",
         "components/popover.component",
+        "components/progress.component",
         "components/select2.component",
         "components/switch.component"
     ],

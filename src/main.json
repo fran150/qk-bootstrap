@@ -11,6 +11,7 @@
         },
         "modal": "components/modal.component",
         "popover": "components/popover.component",
+        "progress": "components/progress.component",
         "select2": "components/select2.component",
         "switch": "components/switch.component"
     },

@@ -5,7 +5,7 @@
 define([
     'quark',
     'knockout',
-    '../lib/colors',
+    '../lib/bgcolors',
     'text!./infobox.component.html'
 ], function($$, ko, colors, template) {
 

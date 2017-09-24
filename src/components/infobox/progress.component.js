@@ -5,7 +5,7 @@
 define([
     'quark',
     'knockout',
-    '../../lib/colors',
+    '../../lib/bgcolors',
     'text!./progress.component.html'
 ], function($$, ko, colors, template) {
 
