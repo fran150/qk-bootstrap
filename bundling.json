@@ -1,15 +1,4 @@
 {
-    "name": "qk-bootstrap",
-    "uglify": true,
-    "externals": [
-        "adminLTE",
-        "adminLTE-plugins",
-        "bt-switch",
-        "bootstrap/js",
-        "bootstrap/css",
-        "moment",
-        "select2"
-    ],
     "include": [
         "components/alert.component",
         "components/box.component",
