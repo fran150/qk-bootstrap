@@ -7,7 +7,8 @@ define([
     'quark',
     'knockout',
     'jquery',
-    'text!./box.component.html'
+    'text!./box.component.html',
+    'adminLTE/js'
 ], function($$, ko, $, template) {
 
     function BoxComponent(params, $scope, $imports) {
@@ -57,7 +58,12 @@ define([
                 that allows the user to remove the box as if it were closing a window.
                 @observable @exposed
             */
-            removable: ko.observable(false)
+            removable: ko.observable(false),
+            /**
+                @parameter bool If true will show the box without the header
+                @observable @exposed
+            */
+            noheader: ko.observable(false)
         }, params, this);
 
         /**
